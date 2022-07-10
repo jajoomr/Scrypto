@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Scrypto">
         <activity android:name=".view.CoinDetailActivity"></activity>
-        <activity android:name=".view.CoinListActivity">
+        <activity android:name=".view.CoinListActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
