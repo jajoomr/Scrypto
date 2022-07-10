@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:padding="@dimen/margin"
+    android:layout_marginStart="@dimen/margin"
+    android:layout_marginEnd="@dimen/margin"
+    android:layout_marginTop="@dimen/margin"
+    android:background="@drawable/bg_card_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/img_coin"
+        android:layout_marginStart="@dimen/margin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/blockchain"
+        android:layout_width="@dimen/image_width"
+        android:layout_height="@dimen/image_height">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/tv_coin_name"
+        app:layout_constraintLeft_toRightOf="@id/img_coin"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="@dimen/text_size"
+        android:text="@string/dummy_coin_name"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/text_color"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <TextView
+        android:id="@+id/tv_coin_value"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:textColor="@color/text_color"
+        app:layout_constraintTop_toBottomOf="@id/tv_coin_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="@string/dummy_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <TextView
+        android:id="@+id/tv_one_day_change"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/img_one_day_status"
+        android:text="@string/dummy_percentage_value"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/small_text_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <ImageView
+        android:id="@+id/img_one_day_status"
+        android:src="@drawable/up_30"
+        app:layout_constraintTop_toTopOf="@id/tv_one_day_change"
+        app:layout_constraintBottom_toBottomOf="@id/tv_one_day_change"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp">
+    </ImageView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/activity_background_color"
+    android:layout_height="match_parent"
+    tools:context=".view.CoinDetailActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_marginStart="@dimen/margin"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        android:id="@+id/tv_coin_name"
+        android:text="@string/dummy_coin_name"
+        android:textSize="@dimen/text_size"
+        android:textColor="@color/text_color"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_returns"
+        app:layout_constraintTop_toBottomOf="@id/tv_coin_name"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingBottom="@dimen/margin_big"
+        android:layout_width="match_parent"
+        android:background="@drawable/bg_card_view"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_returns"
+            android:text="@string/returns"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/margin_big"
+            android:layout_marginTop="@dimen/margin_big"
+            android:textSize="@dimen/large_text_size"
+            android:textColor="@color/text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_one_day"
+            android:layout_marginStart="@dimen/margin_big"
+            android:layout_marginTop="@dimen/margin_big"
+            android:text="@string/_1_day"
+            android:textColor="@color/text_color"
+            app:layout_constraintTop_toBottomOf="@id/tv_returns"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_one_day_return"
+            android:layout_marginEnd="@dimen/margin"
+            android:text="@string/dummy_percentage_value"
+            android:textColor="@color/text_color"
+            app:layout_constraintTop_toTopOf="@id/tv_one_day"
+            app:layout_constraintEnd_toStartOf="@id/one_day_status_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/one_day_status_icon"
+            app:layout_constraintTop_toTopOf="@id/tv_one_day"
+            app:layout_constraintBottom_toBottomOf="@id/tv_one_day"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/margin"
+            android:src="@drawable/up_30"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp">
+        </ImageView>
+
+        <View
+            android:id="@+id/line_one_day"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/margin"
+            android:background="@color/line_separator_color"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            app:layout_constraintTop_toBottomOf="@id/tv_one_day"
+            android:layout_height="@dimen/line_width">
+        </View>
+
+        <TextView
+            android:id="@+id/tv_one_week"
+            android:layout_marginTop="@dimen/margin"
+            android:text="@string/_1_week"
+            android:textColor="@color/text_color"
+            app:layout_constraintTop_toBottomOf="@id/line_one_day"
+            app:layout_constraintStart_toStartOf="@id/tv_one_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_one_week_return"
+            android:text="@string/dummy_percentage_value"
+            android:textColor="@color/text_color"
+            app:layout_constraintTop_toTopOf="@id/tv_one_week"
+            app:layout_constraintStart_toStartOf="@id/tv_one_day_return"
+            app:layout_constraintEnd_toEndOf="@id/tv_one_day_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/one_week_status_icon"
+            app:layout_constraintTop_toTopOf="@id/tv_one_week"
+            app:layout_constraintBottom_toBottomOf="@id/tv_one_week"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/margin"
+            android:src="@drawable/down_30"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp">
+        </ImageView>
+
+        <View
+            android:id="@+id/line_one_week"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/margin"
+            android:background="@color/line_separator_color"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            app:layout_constraintTop_toBottomOf="@id/tv_one_week"
+            android:layout_height="@dimen/line_width">
+        </View>
+
+        <View
+            android:id="@+id/line_one_month"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/margin"
+            android:background="@color/line_separator_color"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            app:layout_constraintTop_toBottomOf="@id/tv_one_month"
+            android:layout_height="@dimen/line_width">
+        </View>
+
+        <TextView
+            android:id="@+id/tv_one_month"
+            android:layout_marginTop="@dimen/margin"
+            android:text="@string/_1_month"
+            android:textColor="@color/text_color"
+            app:layout_constraintTop_toBottomOf="@id/line_one_week"
+            app:layout_constraintStart_toStartOf="@id/tv_one_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_one_month_return"
+            android:text="@string/dummy_percentage_value"
+            android:textColor="@color/text_color"
+            app:layout_constraintTop_toTopOf="@id/tv_one_month"
+            app:layout_constraintStart_toStartOf="@id/tv_one_day_return"
+            app:layout_constraintEnd_toEndOf="@id/tv_one_day_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/one_month_status_icon"
+            app:layout_constraintTop_toTopOf="@id/tv_one_month"
+            app:layout_constraintBottom_toBottomOf="@id/tv_one_month"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/margin"
+            android:src="@drawable/down_30"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tv_three_month"
+            android:layout_marginTop="@dimen/margin"
+            android:text="@string/_3_months"
+            android:textColor="@color/text_color"
+            app:layout_constraintTop_toBottomOf="@id/line_one_month"
+            app:layout_constraintStart_toStartOf="@id/tv_one_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_three_month_return"
+            android:text="@string/dummy_percentage_value"
+            android:textColor="@color/text_color"
+            app:layout_constraintTop_toTopOf="@id/tv_three_month"
+            app:layout_constraintStart_toStartOf="@id/tv_one_day_return"
+            app:layout_constraintEnd_toEndOf="@id/tv_one_day_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/three_month_status_icon"
+            app:layout_constraintTop_toTopOf="@id/tv_three_month_return"
+            app:layout_constraintBottom_toBottomOf="@id/tv_three_month_return"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/margin"
+            android:src="@drawable/down_30"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp">
+        </ImageView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
