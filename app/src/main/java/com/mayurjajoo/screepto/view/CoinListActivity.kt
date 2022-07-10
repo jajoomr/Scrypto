@@ -81,7 +81,7 @@ class CoinListActivity : AppCompatActivity(),
      * Observes data from view model and updates UI
      */
     private fun observeLiveDataAndUpdateUi() {
-        mCoinListViewModel.coinsLiveData.observe(this, {
+        mCoinListViewModel.coinsLiveData.observe(this) {
             when (it) {
                 is Response.Loading -> {
                     //currently do nothing
@@ -94,11 +94,13 @@ class CoinListActivity : AppCompatActivity(),
 
                 is Response.Failure -> {
                     Log.d(TAG, it.errorMessage.toString())
-                    Toast.makeText(this, getString(R.string.error_message),
-                        Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        this, getString(R.string.error_message),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
-        })
+        }
 
         mCoinListViewModel.lastSyncedTime.observe(this, {
             binding.tvLastSyncedTime.text = it })

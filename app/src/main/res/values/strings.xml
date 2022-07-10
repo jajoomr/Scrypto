@@ -6,7 +6,7 @@
     <string name="_1_month">1 month</string>
     <string name="dummy_percentage_value">12%</string>
     <string name="last_synced">Last Synced:</string>
-    <string name="dummy_time">null</string>
+    <string name="dummy_time"></string>
     <string name="error_message">Problem loading Data</string>
     <string name="_3_months">3 Months</string>
     <string name="dummy_coin_name">Bitcoin</string>
